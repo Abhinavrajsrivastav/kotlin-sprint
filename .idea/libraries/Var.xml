@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Var">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Varibles/Var.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
