@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31' // Use the latest version of Kotlin
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // This is your project's dependencies for Java
+    // implementation 'group:name:version'
+
+    // Kotlin Standard Library
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    // Test dependencies
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8" // Use the appropriate JVM target
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+// Ensure that the compileJava task depends on the Kotlin classes being compiled first
+compileJava {
+    dependsOn compileKotlin
+}
